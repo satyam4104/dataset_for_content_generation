@@ -156,14 +156,14 @@ def process_excel_with_ollama(excel_path, num_rows=None, model="llama3.2:3b", ho
     # Optionally, save results to a new Excel file
     if results:
         output_df = pd.DataFrame(results)
-        output_df.to_excel("processed_results_llama3.xlsx", index=False)
-        print("\nResults saved to 'processed_results_llama3.xlsx'")
+        output_df.to_excel("processed_results_llama3_Apache.xlsx", index=False)
+        print("\nResults saved to 'processed_results_llama3_Apache.xlsx'")
 
     return results
 
 if __name__ == "__main__":
-    file_path = "Final_Code_Test_file.xlsx"
-    rows_to_process = None  # Set to None to process all rows without context
+    file_path = "filtered_output_file_Apache.xlsx"
+    rows_to_process = 2  # Set to None to process all rows without context
  
     # Process the Excel file with Ollama
     results = process_excel_with_ollama(file_path, num_rows=rows_to_process)
